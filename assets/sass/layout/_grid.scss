@@ -1,0 +1,55 @@
+.grid-container {
+  margin: 0 auto;
+  padding:0;
+
+  @include respond-to("small") {
+    width: 100%;
+  }
+  @include respond-to("medium") {
+    width: 750px;
+  }
+  @include respond-to("large") {
+    width: 970px;
+  }
+  @include respond-to("xl") {
+    width: 1170px;
+  }
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat( 12, 1fr);
+  grid-gap: 10px 10px;
+  margin-botom:15px;
+}
+
+
+/*XS*/
+
+  @for $value from 1 through 12 {
+  .col-xs-#{$value} { grid-column: span  $value;}
+  }
+
+@media (min-width: 768px){
+  @for $value from 1 through 12 {
+  .col-sm-#{$value} { grid-column: span  $value;}
+  }
+}
+
+@media (min-width: 992px){
+  @for $value from 1 through 12 {
+  .col-md-#{$value} {grid-column: span  $value;}
+  }
+}
+
+@media (min-width: 1200px){
+  @for $value from 1 through 12 {
+  .col-lg-#{$value} { grid-column: span  $value;}
+  }
+}
+
+@media (min-width: 1200px){
+  @for $value from 1 through 12 {
+  .col-md-#{$value} {grid-column: span  $value;}
+  }
+}

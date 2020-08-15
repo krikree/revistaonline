@@ -1,0 +1,40 @@
+.navbar {
+    padding: 10px;
+    border-bottom: 1px solid gray
+}
+
+.navbar__logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.navbar__nav {
+    display: inline-block;
+    text-align: right;
+}
+
+.navbar__nav ul li  {    display: inline-block;}
+
+.navbar__nav ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navigation__menu__input {
+    border-radius: 30px;
+}
+
+.navbar__nav__us {
+        display:none;
+    @include respond-to('medium') {
+        display: inline-block;
+  }
+      @include respond-to('large') {
+        display: inline-block;
+  }
+    @include respond-to('xl') {
+        display: inline-block;
+  }
+}
